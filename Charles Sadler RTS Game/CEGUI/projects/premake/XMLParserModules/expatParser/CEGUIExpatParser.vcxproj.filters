@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cegui">
+      <UniqueIdentifier>{18148042-f5a5-4725-9b80-e26a78a7a548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src">
+      <UniqueIdentifier>{03ad11e7-0011-4216-8528-314e5bcaef70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\XMLParserModules">
+      <UniqueIdentifier>{93ba76ec-b67a-4e45-9016-c923870c287a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\src\XMLParserModules\expatParser">
+      <UniqueIdentifier>{6bdbd422-3858-4b6b-86b3-4e5abb67f565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include">
+      <UniqueIdentifier>{cb900559-bb13-47f7-bcb9-c812aa20a76d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\XMLParserModules">
+      <UniqueIdentifier>{ba645d51-ff06-4cd0-ac07-0c5224f41d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cegui\include\XMLParserModules\expatParser">
+      <UniqueIdentifier>{9ab61866-e2df-4a7f-a246-fa10b3c5c8f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\cegui\src\XMLParserModules\expatParser\CEGUIExpatParser.cpp">
+      <Filter>cegui\src\XMLParserModules\expatParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cegui\src\XMLParserModules\expatParser\CEGUIExpatParserModule.cpp">
+      <Filter>cegui\src\XMLParserModules\expatParser</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\cegui\include\XMLParserModules\expatParser\CEGUIExpatParser.h">
+      <Filter>cegui\include\XMLParserModules\expatParser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\cegui\include\XMLParserModules\expatParser\CEGUIExpatParserModule.h">
+      <Filter>cegui\include\XMLParserModules\expatParser</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

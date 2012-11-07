@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{70fecdca-9327-46e0-9d9b-ac2286283599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Ogre">
+      <UniqueIdentifier>{59b8a1d0-a224-45ab-830c-c9cf789ccd0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Game">
+      <UniqueIdentifier>{56de2880-0bbd-4e7d-87dd-fee0e60f48d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{6407160c-77b4-4a32-8d5b-5c8bfd2b892b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UsefulTool">
+      <UniqueIdentifier>{724e857e-90a6-4cb5-b019-24ca1a3c5559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{62635767-73e4-49d1-87bc-8cd2fa39eac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels">
+      <UniqueIdentifier>{dc4aaf6b-3834-40d6-8409-de37fc5f7d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MessageManager">
+      <UniqueIdentifier>{64145ffe-51da-43b9-ac8a-0a8998999280}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mainProg.cpp">
+      <Filter>Game\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="myCEGUI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="commentedOutCode.cpp" />
+    <ClCompile Include="meshLevels.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>MessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageHandler.cpp">
+      <Filter>MessageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreApplication.cpp">
+      <Filter>Game\Ogre</Filter>
+    </ClCompile>
+    <ClCompile Include="meshLevel2.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Game\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="myCEGUI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="UsefulTool.h">
+      <Filter>UsefulTool</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="meshLevels.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="FastDelegate.h">
+      <Filter>MessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="FastDelegateBind.h">
+      <Filter>MessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>MessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageHandler.h">
+      <Filter>MessageManager</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreApplication.h">
+      <Filter>Game\Ogre</Filter>
+    </ClInclude>
+    <ClInclude Include="meshLevel2.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\OgreSDK\CEGUI-0.7.6\projects\premake\config.lua">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
