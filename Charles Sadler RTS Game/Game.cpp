@@ -57,9 +57,11 @@ void Game::createScene(void)
 	{
 	case 1:
 		{
-			AudioManager::getInstance()->addSound("song.wav", "SONG");
-			AudioManager::getInstance()->playSound("SONG");
+
 			Menu::createBackground();
+			AudioManager::getInstance()->addSound("AudioFiles/Fx.wav", "SONG");
+			//AudioManager::getInstance()->addSound("AudioFiles/Song.wav", "SONG");
+			AudioManager::getInstance()->playSound("SONG");
 			myCEGUI::implimentingCEGUI();
 			Menu::startGame()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::start, this));
 			Menu::exitGame()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::quit, this));
@@ -92,6 +94,8 @@ void Game::createScene(void)
 			myCEGUI::implimentingCEGUI();
 			myCEGUI::createButton()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::quit, this));
 			myCEGUI::createMenuButton()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::menu, this));
+			//AudioManager::getInstance()->addSound("AudioFiles/Fx.wav", "SONG");
+			//AudioManager::getInstance()->playSound("SONG");
 
 			MeshLevel2::createLevel();
 
@@ -115,7 +119,7 @@ void Game::destroyScene(void)
 	OGRE_DELETE mTerrainGlobals;
 
 	CEGUI::System::getSingleton().getGUISheet()->destroy();
-	delete AudioManager::getInstance();
+	//delete AudioManager::getInstance();
 	mSceneMgr->clearScene();
 
 }

@@ -90,7 +90,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\OgreSDK\lib\debug;$(ProjectDir)\OgreSDK\boost_1_47\lib;$(ProjectDir)\CEGUI\lib;$(ProjectDir)\Audio;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CEGUIOgreRenderer_d.lib;CEGUIBase_d.lib;OgreTerrain_d.lib;OgreMain_d.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>CEGUIOgreRenderer_d.lib;CEGUIBase_d.lib;OgreTerrain_d.lib;OgreMain_d.lib;OIS_d.lib;SDL.lib;SDLmain.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
