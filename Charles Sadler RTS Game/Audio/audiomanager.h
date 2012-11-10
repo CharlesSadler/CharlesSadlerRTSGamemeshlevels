@@ -35,6 +35,7 @@ public:
 public:
 	bool addSound(char* filename, string name);
 	void playSound(string name);
+	void stopSound();
 
 private:
 	// Map container to maintain collection of sounds

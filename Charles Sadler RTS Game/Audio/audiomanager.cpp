@@ -56,3 +56,7 @@ void AudioManager::playSound(string name)
 		Mix_PlayChannel(-1, it->second, 0);
 }
 
+void AudioManager::stopSound()
+{
+	Mix_HaltChannel(-1);	
+}
