@@ -1,6 +1,16 @@
 #ifndef __Game_h_
 #define __Game_h_
 
+
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+#include "sdl.h"
+#include "sdl_mixer.h"
+
+#include "audiomanager.h"
 #include "TerrainLevel.h"
 #include "meshLevel2.h"
 #include "UsefulTool.h"
@@ -8,6 +18,8 @@
 #include "myCEGUI.h"
 #include "Menu.h"
 #include "meshLevels.h"
+
+#include <deque>
 
 class Game : public OgreApplication
 {
@@ -26,7 +38,8 @@ protected:
     virtual void createScene(void);
 	virtual void createFrameListener(void);
     virtual void destroyScene(void);
-	bool setup(void)
+	virtual bool nextLocation(void);
+ 	bool setup(void)
 	{
 		if (!OgreApplication::setup())
 			return false;
@@ -52,6 +65,18 @@ protected:
 	bool start(const CEGUI::EventArgs &e);
 	bool stage2(const CEGUI::EventArgs &e);
 	bool fps(const CEGUI::EventArgs &e);
+
+	Ogre::Real mDistance;                  // The distance the object has left to travel
+    Ogre::Vector3 mDirection;              // The direction the object is moving
+    Ogre::Vector3 mDestination;            // The destination the object is moving towards
+ 
+    Ogre::AnimationState *mAnimationState; // The current animation state of the object
+ 
+    Ogre::Entity *mEntity;                 // The Entity we are animating
+    Ogre::SceneNode *mNode;                // The SceneNode that the Entity is attached to
+    std::deque<Ogre::Vector3> mWalkList;   // The list of points we are walking to
+ 
+    Ogre::Real mWalkSpeed;                 // The speed at which the object is moving
 
 };
 

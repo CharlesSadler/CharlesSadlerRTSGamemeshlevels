@@ -9,6 +9,7 @@ MeshLevel2::~MeshLevel2()
 }
 void MeshLevel2::createLevel()
 {
+	
 	Ogre::SceneManager* mSceneMgr = (Ogre::SceneManager*)Storage::GetSingleton().GetItem("Ogre_SceneMgr");
 
 	Ogre::Camera* mCamera = (Ogre::Camera*)Storage::GetSingleton().GetItem("Ogre_mCamera");
@@ -59,4 +60,53 @@ void MeshLevel2::createLevel()
 
 	mSceneMgr->setSkyDome(true, "Examples/CloudySky", 5, 8);
 
+	/*
+	Ogre::SceneManager* mSceneMgr = (Ogre::SceneManager*)Storage::GetSingleton().GetItem("Ogre_SceneMgr");
+	mSceneMgr->setAmbientLight(Ogre::ColourValue(1.0f, 1.0f, 1.0f));
+	// Create the entity
+    mEntity = mSceneMgr->createEntity("Robot", "robot.mesh");
+ 
+        // Create the scene node
+    mNode = mSceneMgr->getRootSceneNode()->
+            createChildSceneNode("RobotNode", Ogre::Vector3(0.0f, 0.0f, 25.0f));
+     mNode->attachObject(mEntity);
+
+	mWalkList.push_back(Ogre::Vector3(550.0f,  0.0f,  50.0f ));
+    mWalkList.push_back(Ogre::Vector3(-100.0f,  0.0f, -200.0f));
+
+	// Create objects so we can see movement
+        Ogre::Entity *ent;
+        Ogre::SceneNode *node;
+ 
+        ent = mSceneMgr->createEntity("Knot1", "knot.mesh");
+        node = mSceneMgr->getRootSceneNode()->createChildSceneNode("Knot1Node",
+            Ogre::Vector3(0.0f, -10.0f,  25.0f));
+        node->attachObject(ent);
+        node->setScale(0.1f, 0.1f, 0.1f);
+ 
+        ent = mSceneMgr->createEntity("Knot2", "knot.mesh");
+        node = mSceneMgr->getRootSceneNode()->createChildSceneNode("Knot2Node",
+            Ogre::Vector3(550.0f, -10.0f,  50.0f));
+        node->attachObject(ent);
+        node->setScale(0.1f, 0.1f, 0.1f);
+ 
+        ent = mSceneMgr->createEntity("Knot3", "knot.mesh");
+        node = mSceneMgr->getRootSceneNode()->createChildSceneNode("Knot3Node",
+            Ogre::Vector3(-100.0f, -10.0f,-200.0f));
+        node->attachObject(ent);
+        node->setScale(0.1f, 0.1f, 0.1f);*/
 }
+
+void MeshLevel2::createFrameListener(void){
+	OgreApplication::createFrameListener();
+}
+
+bool MeshLevel2::nextLocation(void){
+	return true;
+}
+bool MeshLevel2::frameRenderingQueued(const Ogre::FrameEvent &evt){
+	return OgreApplication::frameRenderingQueued(evt);
+}
+
+
+

@@ -57,6 +57,8 @@ void Game::createScene(void)
 	{
 	case 1:
 		{
+			AudioManager::getInstance()->addSound("song.wav", "SONG");
+			AudioManager::getInstance()->playSound("SONG");
 			Menu::createBackground();
 			myCEGUI::implimentingCEGUI();
 			Menu::startGame()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::start, this));
@@ -92,8 +94,9 @@ void Game::createScene(void)
 			myCEGUI::createMenuButton()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::menu, this));
 
 			MeshLevel2::createLevel();
+
 			break;
-		}
+				}
 	case 3:
 		{
 			myCEGUI::implimentingCEGUI();
@@ -105,12 +108,14 @@ void Game::createScene(void)
 		}
 	}
 }
+
 void Game::destroyScene(void)
 {
 	OGRE_DELETE mTerrainGroup;
 	OGRE_DELETE mTerrainGlobals;
 
 	CEGUI::System::getSingleton().getGUISheet()->destroy();
+	delete AudioManager::getInstance();
 	mSceneMgr->clearScene();
 
 }
@@ -142,11 +147,17 @@ void Game::createFrameListener(void)
 	Ogre::WindowEventUtilities::addWindowEventListener(mWindow, this);
 
 	mRoot->addFrameListener(this);
-	//BaseApplication::createFrameListener();
+	OgreApplication::createFrameListener();
 	// mInfoLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "TInfo", "", 350);
 }
 //-------------------------------------------------------------------------------------
+bool Game::nextLocation(void)
+{
+	return true;
+}
 
+
+//-------------------------------------------------------------------------------------
 bool Game::keyPressed(const OIS::KeyEvent &arg)
 {
 	CEGUI::System &sys = CEGUI::System::getSingleton();

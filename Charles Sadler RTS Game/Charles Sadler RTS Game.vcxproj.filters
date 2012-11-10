@@ -29,6 +29,9 @@
     <Filter Include="MessageManager">
       <UniqueIdentifier>{64145ffe-51da-43b9-ac8a-0a8998999280}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{7001d892-2ad6-4781-a544-7055e193ca5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainProg.cpp">
@@ -58,6 +61,12 @@
     </ClCompile>
     <ClCompile Include="meshLevel2.cpp">
       <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\audiomanager.cpp">
+      <Filter>Audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +102,18 @@
     </ClInclude>
     <ClInclude Include="meshLevel2.h">
       <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\audiomanager.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\begin_code.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\close_code.h">
+      <Filter>Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
