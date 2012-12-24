@@ -242,8 +242,8 @@ namespace OgreBites
 				else if (evt.key == OIS::KC_S || evt.key == OIS::KC_DOWN) mGoingBack = true;
 				else if (evt.key == OIS::KC_A || evt.key == OIS::KC_LEFT) mGoingLeft = true;
 				else if (evt.key == OIS::KC_D || evt.key == OIS::KC_RIGHT) mGoingRight = true;
-				else if (evt.key == OIS::KC_PGUP) mGoingUp = true;
-				else if (evt.key == OIS::KC_PGDOWN) mGoingDown = true;
+				else if (evt.key == OIS::KC_Q || evt.key == OIS::KC_PGUP) mGoingUp = true;
+				else if (evt.key == OIS::KC_E || evt.key == OIS::KC_PGDOWN) mGoingDown = true;
 				else if (evt.key == OIS::KC_LSHIFT) mFastMove = true;
 			}
 		}
@@ -259,8 +259,8 @@ namespace OgreBites
 				else if (evt.key == OIS::KC_S || evt.key == OIS::KC_DOWN) mGoingBack = false;
 				else if (evt.key == OIS::KC_A || evt.key == OIS::KC_LEFT) mGoingLeft = false;
 				else if (evt.key == OIS::KC_D || evt.key == OIS::KC_RIGHT) mGoingRight = false;
-				else if (evt.key == OIS::KC_PGUP) mGoingUp = false;
-				else if (evt.key == OIS::KC_PGDOWN) mGoingDown = false;
+				else if (evt.key == OIS::KC_PGUP || evt.key == OIS::KC_Q) mGoingUp = false;
+				else if (evt.key == OIS::KC_PGDOWN || evt.key == OIS::KC_E) mGoingDown = false;
 				else if (evt.key == OIS::KC_LSHIFT) mFastMove = false;
 			}
 		}

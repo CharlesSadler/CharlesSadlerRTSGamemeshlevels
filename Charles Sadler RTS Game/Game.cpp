@@ -17,8 +17,8 @@ http://www.ogre3d.org/tikiwiki/
 
 #include "Game.h"
 //#include <sstream>
-
-
+OgreMasterTimer m_Timer;
+OgreMasterTimer& timer = m_Timer;
 int state = 1;
 //-------------------------------------------------------------------------------------
 
@@ -106,7 +106,7 @@ void Game::createScene(void)
 			myCEGUI::createButton()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::quit, this));
 			myCEGUI::createMenuButton()->subscribeEvent(CEGUI::PushButton::EventClicked, CEGUI::Event::Subscriber(&Game::menu, this));
 
-			MeshLevels::createLevel();			
+			MeshLevel1::createLevel();			
 		break;
 		}
 	}
@@ -220,13 +220,15 @@ bool Game::menu(const CEGUI::EventArgs &e)
 {
 	state = 1;
 	destroyScene();
+	m_Timer.reset();
 	createScene();
 	return state;
 }
 bool Game::start(const CEGUI::EventArgs &e)
 {
 	state = 2;
-	destroyScene();		
+	destroyScene();	
+	m_Timer.reset();
 	createScene();
 	return state;
 }
@@ -246,12 +248,16 @@ bool Game::stage2(const CEGUI::EventArgs &e)
 {
 	state = 3;
 	destroyScene();
+	m_Timer.reset();
 	createScene();
 	return state;
 }
 //-------------------------------------------------------------------------------------
+
 bool Game::upDate(void)
 {
+	float dt = m_Timer.getDelta();
+
 	_fpsCounter =+ 1.0f;
 
 	if(mWindow->isClosed())
@@ -273,7 +279,7 @@ bool Game::upDate(void)
 
 
 	Ogre::FrameEvent evt;
-	evt.timeSinceLastFrame = 0.016; //put your dt here when you get it
+	evt.timeSinceLastFrame = dt;//0.016; 
 	mCameraMan->frameRenderingQueued(evt);
 
 	//Need to inject timestamps to CEGUI System.

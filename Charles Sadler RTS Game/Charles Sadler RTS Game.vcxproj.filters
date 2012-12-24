@@ -68,6 +68,9 @@
     <ClCompile Include="Audio\audiomanager.cpp">
       <Filter>Audio</Filter>
     </ClCompile>
+    <ClCompile Include="meshLevel1.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -114,6 +117,12 @@
     </ClInclude>
     <ClInclude Include="Audio\close_code.h">
       <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreMasterTimer.h">
+      <Filter>UsefulTool</Filter>
+    </ClInclude>
+    <ClInclude Include="meshLevel1.h">
+      <Filter>Levels</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

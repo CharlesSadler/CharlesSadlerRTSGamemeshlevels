@@ -15,6 +15,7 @@
     <ClCompile Include="commentedOutCode.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="meshLevel1.cpp" />
     <ClCompile Include="meshLevel2.cpp" />
     <ClCompile Include="meshLevels.cpp" />
     <ClCompile Include="mainProg.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="FastDelegateBind.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="meshLevel1.h" />
     <ClInclude Include="meshLevel2.h" />
     <ClInclude Include="meshLevels.h" />
     <ClInclude Include="Menu.h" />
@@ -39,6 +41,7 @@
     <ClInclude Include="MessageHandler.h" />
     <ClInclude Include="myCEGUI.h" />
     <ClInclude Include="OgreApplication.h" />
+    <ClInclude Include="OgreMasterTimer.h" />
     <ClInclude Include="UsefulTool.h" />
   </ItemGroup>
   <ItemGroup>

@@ -18,8 +18,11 @@ using namespace std;
 #include "myCEGUI.h"
 #include "Menu.h"
 #include "meshLevels.h"
+#include "OgreMasterTimer.h"
+#include "meshLevel1.h"
 
 #include <deque>
+class OgreMasterTimer;
 
 class Game : public OgreApplication
 {
